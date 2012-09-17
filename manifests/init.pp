@@ -64,7 +64,7 @@ class scala(
   $package_provider = $::osfamily ? {
     'RedHat' => 'rpm',
     'Debian' => 'dpkg',
-    default  => { fail('Unsupported OS family') }
+    default  => fail('Unsupported OS family'),
   }
 
   package { "Scala ${version_real}":
