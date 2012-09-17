@@ -12,7 +12,7 @@ class scala::params {
   $os_package_format = $::osfamily ? {
     'RedHat' => 'rpm',
     'Debian' => 'deb',
-    default  => { fail('Unsupported OS family') }
+    default  => fail('Unsupported OS family'),
   }
 
   $package_format = $::scala_package_format ? {
