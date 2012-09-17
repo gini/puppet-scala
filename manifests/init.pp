@@ -54,8 +54,7 @@ class scala(
     default => $url,
   }
 
-  archive::download { "Download Scala ${version_real}":
-    ensure     => present,
+  archive::download { "scala-${version_real}.${package_format_real}":
     url        => $url_real,
     checksum   => false,
     src_target => '/var/tmp',
@@ -67,10 +66,10 @@ class scala(
     default  => fail('Unsupported OS family'),
   }
 
-  package { "Scala ${version_real}":
+  package { "scala-${version_real}":
     ensure   => installed,
     provider => $package_provider,
-    source   => "/var/tmp/scala-${version}.${package_format}",
-    require  => Archive::Download["Download Scala ${version_real}"],
+    source   => "/var/tmp/scala-${version_real}.${package_format_real}",
+    require  => Archive::Download["scala-${version_real}.${package_format_real}"],
   }
 }
