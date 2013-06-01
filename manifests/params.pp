@@ -6,7 +6,7 @@
 #
 # === Copyright
 #
-# Copyright 2012 smarchive GmbH
+# Copyright 2012 2013 smarchive GmbH
 #
 class scala::params {
   $os_package_format = $::osfamily ? {
@@ -21,7 +21,7 @@ class scala::params {
   }
 
   $version = $::scala_version ? {
-    undef   => '2.9.2',
+    undef   => '2.10.1',
     default => $::scala_version,
   }
 

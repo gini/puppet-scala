@@ -8,19 +8,21 @@ Overview
 
 Install the Scala programming language from the official project site.
 
+
 Usage
 -----
 
 Example:
 
     class { 'scala':
-      version => '2.9.2',
+      version => '2.10.1',
     }
+
 
 License
 -------
 
-Copyright (c) 2012 smarchive GmbH
+Copyright (c) 2012, 2013 smarchive GmbH
 
 This script is licensed under the Apache License, Version 2.0.
 
