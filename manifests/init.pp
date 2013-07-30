@@ -50,7 +50,7 @@ class scala(
   }
 
   $url_real = $url ? {
-    'UNSET' => "http://www.scala-lang.org/downloads/distrib/files/scala-${version_real}.${package_format_real}",
+    'UNSET' => "http://www.scala-lang.org/files/archive/scala-${version_real}.${package_format_real}",
     default => $url,
   }
 

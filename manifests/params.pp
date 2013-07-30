@@ -21,12 +21,12 @@ class scala::params {
   }
 
   $version = $::scala_version ? {
-    undef   => '2.10.1',
+    undef   => '2.10.2',
     default => $::scala_version,
   }
 
   $url = $::scala_url ? {
-    undef   => "http://www.scala-lang.org/downloads/distrib/files/scala-${version}.${package_format}",
+    undef   => "http://www.scala-lang.org/files/archive/scala-${version_real}.${package_format_real}",
     default => $::scala_url,
   }
 }
